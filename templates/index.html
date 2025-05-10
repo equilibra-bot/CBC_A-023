@@ -15,6 +15,7 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#chatbot">AI Assistant</a>
+        <a href="#DASS">Self assessment</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -42,20 +43,189 @@
         <div class="bot-message">Hi! I'm MindWell. How are you feeling today?</div>
       </div>
       <form id="chatForm">
+        
+
         <input type="text" id="userInput" placeholder="Describe how you're feeling..." required>
         <button type="submit" onclick="sendMessage()">Send</button>
       </form>
-      <button id="voiceBtn">🎤 Speak</button>
+      <button id="voiceBtn">🎤 Speak</button> 
     </div>
   </section>
 
+
+   <section id="DASS">
+    <link rel="stylesheet" href="style.css">
+    <div class="container">
+      <h2>DASS - Mental Health Assessment</h2>
+      <p>The DASS is a self-report questionnaire designed to measure the emotional states of depression, anxiety, and stress.</p>
+    <div class="container">
+        <form id="dassForm">
+            <!-- Depression Questions -->
+            <section class="depression-section">
+                <h2>Depression</h2>
+                <div class="question">
+                    <label for="d1">I couldn't seem to experience any positive feelings at all.</label>
+                    <select id="d1" name="d1">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="d2">I felt that I had nothing to look forward to.</label>
+                    <select id="d2" name="d2">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="d3">I found it difficult to work up the initiative to do things.</label>
+                    <select id="d3" name="d3">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="d4">I felt that I was rather hopeless.</label>  
+                    <select id="d4" name="d4">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="d5">I had trouble keeping my mind on what I was doing.</label>
+                    <select id="d5" name="d5">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+            </section>
+                 
+  <!-- Anxiety Questions -->
+            <section class ="anxiety-section">
+                <h2>Anxiety</h2>
+                <div class="question">
+                    <label for="a1">I was aware of dryness of my mouth.</label>
+                    <select id="a1" name="a1">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="a2">I experienced difficulty in breathing.</label>
+                    <select id="a2" name="a2">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="a3">I experienced trembling (e.g., in the hands).</label>
+                    <select id="a3" name="a3">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="a4">I felt I was close to panic.</label>
+                    <select id="a4" name="a4">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="a5">I felt scared without any good reason.</label>
+                    <select id="a5" name="a5">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+            </section>
+   <!-- Stress Questions -->
+            <section class="stress-section">
+                <h2>Stress</h2>
+                <div class="question">
+                    <label for="s1">I found myself getting agitated.</label>
+                    <select id="s1" name="s1">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="s2">I found it difficult to relax.</label>
+                    <select id="s2" name="s2">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="s3">I was intolerant of anything that kept me from getting on with what I was doing.</label>
+                    <select id="s3" name="s3">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="s4">I felt that I was rather over-reacting to situations.</label>
+                    <select id="s4" name="s4">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="s5">I felt that I was using a lot of mental energy to cope with situations.</label>
+                    <select id="s5" name="s5">
+                        <option value="0">Did not apply to me at all</option>
+                        <option value="1">Applied to me to some degree</option>
+                        <option value="2">Applied to me to a considerable degree</option>
+                        <option value="3">Applied to me very much</option>
+                    </select>
+                </div>
+            </section>
+       <button type="button" onclick="calculateResults()">Submit</button>
+        </form>
+
+        <div id="results" style="display: none;">
+            <h2>Results</h2>
+            <p id="resultText"></p>
+        </div>
+    </div>
+
+    
   <section id="contact">
     <div class="container">
       <h2>Contact Us</h2>
-      <p>Need to get in touch with a professional? <a href="https://www.psychologytoday.com/us/therapists" target="_blank">Find a therapist</a></p>
+      <p>Need to get in touch with a professional? <a href="https://www.hopequre.com/" target="_blank">Find a therapist</a></p>
       <p>Email: support@mindwell.ai</p>
     </div>
   </section>
+
 
   <footer>
     <div class="container">
@@ -63,6 +233,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="scri.js"></script>
 </body>
 </html>
