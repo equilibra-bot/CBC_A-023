@@ -1,33 +1,402 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
+/* Reset and Base Styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
 header {
-  background-color: #4CAF50;
+  background-color: #2c3e50;
+  padding: 20px 0;
+  color: white;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 60px 20px;
 }
 
-h1 {
-  font-size: 2em;
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-#chat-container {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #2193b0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-#chat-log {
-  height: 400px;
-  overflow-y: scroll;
-  border: 1px solid #ccc
+.btn:hover {
+  background-color: #e6f9ff;
+  color: #051114;
+}
+
+#chatForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    gap: 10px;
+}
+
+#chatForm input[type="text"] {
+    flex: 1;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 15px;
+    font-size: 1em;
+    outline: none;
+    background-color: white;
+}
+
+#chatForm button {
+    background-color: #81c1ec; /* calm blue */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#chatForm button:hover {
+    background-color:   #7cc5f5; 
+}
+
+
+/* Sections */
+section {
+  padding: 40px 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Chatbot */
+#chatbot .chatbox {
+  background-color: #f6f7f4e2;
+  border: 1px solid #ddd;
+  padding: 20px;
+  height: 300px;
+  overflow-y: auto;
+}
+
+#voiceBtn {
+    background-color: #84badf; /* calm blue */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#voiceBtn:hover {
+    background-color: #97cef2;
+}
+
+#voiceBtn:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    align:-items: center;
+    gap: 8px;
+}
+
+
+.depression-section {
+    background-color: #f3f8ff; /* soft light blue for calmness */
+    padding: 25px;
+    border-left: 5px solid #5dade2; /* accent color */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.depression-section h2 {
+    color: #2e86c1;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.depression-section .question {
+    margin-bottom: 20px;
+}
+
+.depression-section label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.depression-section select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.depression-section select:focus {
+    border-color: #5dade2;
+    outline: none;
+    box-shadow: 0 0 4px rgba(93, 173, 226, 0.5);
+}
+
+.anxiety-section {
+    background-color: #fef9f3; /* soft warm background */
+    padding: 25px;
+    border-left: 5px solid #f5b041; /* orange accent */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.anxiety-section h2 {
+    color: #e67e22; /* deep orange */
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.anxiety-section .question {
+    margin-bottom: 20px;
+}
+
+.anxiety-section label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.anxiety-section select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.anxiety-section select:focus {
+    border-color: #f5b041;
+    outline: none;
+    box-shadow: 0 0 4px rgba(245, 176, 65, 0.5);
+}
+
+.stress-section {
+    background-color: #f7f3ff; /* soft lavender background */
+    padding: 25px;
+    border-left: 5px solid #a569bd; /* purple accent */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stress-section h2 {
+    color: #884ea0; /* deep purple heading */
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.stress-section .question {
+    margin-bottom: 20px;
+}
+
+.stress-section label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.stress-section select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.stress-section select:focus {
+    border-color: #a569bd;
+    outline: none;
+    box-shadow: 0 0 4px rgba(165, 105, 189, 0.5);
+}
+
+/* Basic button styling */
+button[type="button"] {
+    background-color: #b99bfe; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    outline: none; /* Remove outline */
+}
+
+/* Hover effect */
+button[type="button"]:hover {
+    background-color:  #b99bfe; /* Slightly darker green on hover */
+    transform: translateY(-2px); /* Lift the button slightly */
+}
+
+/* Active effect (when clicked) */
+button[type="button"]:active {
+    background-color:  #b4daef; 
+    transform: translateY(2px); /* Make it look pressed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly smaller shadow on click */
+}
+
+/* Disabled button styling (optional) */
+button[type="button"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+
+
+/* Style for the footer container */
+footer {
+    background-color: #040a10; /* Dark grayish-blue background */
+    color: rgb(232, 230, 230);
+    padding: 20px 0; /* Vertical padding */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #5cc4e7, #a29bfe); /* Gradient from purple to light purple */
+    color: white;
+    padding: 30px 0; /* More vertical padding for balance */
+    text-align: center;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container inside footer */
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Footer text */
+footer p {
+    font-size: 1em;
+    margin: 0;
+    color: #ecf0f1; /* Light gray */
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect on text */
+footer p:hover {
+    color: #eeeae4f7; /* Bright gold color on hover */
+    cursor: pointer;
+}
+
+/* Add a small link to social media (optional) */
+footer .social-links {
+    margin-top: 15px;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.3em;
+    transition: transform 0.3s ease;
+}
+
+footer .social-links a:hover {
+    transform: scale(1.2);
+    color: #f8f5f1fb; /* Bright gold on hover */
+}
+
+/* Optional: Small footer on very small screens */
+@media screen and (max-width: 600px) {
+    footer p {
+        font-size: 0.85em;
+    }
+}
+
