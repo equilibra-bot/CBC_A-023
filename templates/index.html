@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindwell - your companion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>MindWell</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#chatbot">AI Assistant</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Your AI Mental Health Companion</h2>
+      <p>Monitor your mental well-being, get recommendations, and feel supported — anytime, anywhere.</p>
+      <a href="#chatbot" class="btn">Talk to MindWell</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About MindWell</h2>
+      <p>MindWell is a virtual mental health assistant designed to help you monitor your mood, manage emotions, and connect to wellness resources. Powered by AI-style logic, it provides supportive, thoughtful, and non-clinical advice to promote well-being.</p>
+    </div>
+  </section>
+
+  <section id="chatbot">
+    <div class="container">
+      <h2>Chat with MindWell</h2>
+      <div class="chatbox" id="chatbox">
+        <div class="bot-message">Hi! I'm MindWell. How are you feeling today?</div>
+      </div>
+      <form id="chatForm">
+        <input type="text" id="userInput" placeholder="Describe how you're feeling..." required>
+        <button type="submit" onclick="sendMessage()">Send</button>
+      </form>
+      <button id="voiceBtn">🎤 Speak</button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Need to get in touch with a professional? <a href="https://www.psychologytoday.com/us/therapists" target="_blank">Find a therapist</a></p>
+      <p>Email: support@mindwell.ai</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MindWell. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
